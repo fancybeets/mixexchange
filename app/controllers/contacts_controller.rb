@@ -13,6 +13,7 @@ class ContactsController < ApplicationController
                 puts "mail succeeded"
             else
                 puts "mail failed"
+            end
             flash[:success] = "Message sent."
             redirect_to new_contact_path
         else

@@ -9,7 +9,10 @@ class ContactsController < ApplicationController
             name = params[:contact][:name]
             email = params[:contact][:email]
             body = params[:contact][:comments]
-            ContactMailer.contact_email(name,email,body)
+            if(ContactMailer.contact_email(name,email,body))
+                puts "mail succeeded"
+            else
+                puts "mail failed"
             flash[:success] = "Message sent."
             redirect_to new_contact_path
         else

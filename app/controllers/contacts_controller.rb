@@ -11,6 +11,7 @@ class ContactsController < ApplicationController
             body = params[:contact][:comments]
             if(ContactMailer.contact_email(name,email,body))
                 puts "Mailing succeeded"
+                puts ContactMailer.contact_email(name,email,body)
             else
                 puts "Mailing failed"
             end

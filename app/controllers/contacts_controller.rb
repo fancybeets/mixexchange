@@ -10,16 +10,10 @@ class ContactsController < ApplicationController
             email = params[:contact][:email]
             body = params[:contact][:comments]
             if(ContactMailer.contact_email(name,email,body))
-<<<<<<< HEAD
-                puts "mail succeeded"
-            else
-                puts "mail failed"
-=======
                 puts "Mailing succeeded"
                 puts ContactMailer.contact_email(name,email,body)
             else
                 puts "Mailing failed"
->>>>>>> master
             end
             flash[:success] = "Message sent."
             redirect_to new_contact_path

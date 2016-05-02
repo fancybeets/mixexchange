@@ -13,7 +13,7 @@
                 <li>Last but not least, Thing 3!</li>
                 <li style="text-decoration:line-through; color:#101010;">Literally nothing else</li>
             </ul>
-            <%= link_to "Sign up for free", new_user_registration_path, class: 'btn btn-primary btn-lg btn-block signup-button' %>
+            <%= link_to "Sign up for free", new_user_registration_path(plan: @basic_plan.id), class: 'btn btn-primary btn-lg btn-block signup-button' %>
         </div>
     </div>
     <div class="col-md-6">
@@ -26,7 +26,7 @@
                 <li>Thing 3</li>
                 <li>Literally nothing else</li>
             </ul>
-            <%= link_to "Sign up for big bucks", new_user_registration_path, class: 'btn btn-success btn-lg btn-block signup-button' %>
+            <%= link_to "Sign up for big bucks", new_user_registration_path(plan: @premium_plan.id), class: 'btn btn-success btn-lg btn-block signup-button' %>
         </div>
     </div>
 </div>

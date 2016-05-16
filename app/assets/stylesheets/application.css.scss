@@ -18,3 +18,43 @@
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+
+* {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+/*Custom CSS for the main page*/
+.advert-form {
+    height: 300px;
+    position: relative;
+}
+
+.signup-button {
+    position: absolute;
+    bottom: 20px;
+    width: 92%;
+}
+
+
+/*Custom CSS for alerts and notices*/
+.alert-notice {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: left;
+ }
+ 
+ #error_explanation {
+     background-color: #fcf8e3;
+     border-color: #faebcc;
+     color: #8a6d3b;
+     border-radius: 4px;
+     border: 1px solid transparent;
+     padding: 15px;
+     margin-bottom: 20px;
+     font-size: 14px;
+ }
+ 
+ #error_explanation h2 {
+     font-size: 18px;
+ }

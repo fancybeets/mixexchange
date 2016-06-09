@@ -1,9 +1,9 @@
-<%= link_to "Create your profile", new_user_profile_path(current_user) if current_user %>
 <div class="jumbotron text-center">
     <h1>Welcome to The Mix Exchange</h1>
     <h3>you fucking hipster</h3>
 </div>
 <div class = "row">
+    <% unless current_user %>
     <div class="col-md-6">
         <div class = "advert-form well">
             <h2 class="text-center">Basic Membership</h2>
@@ -30,4 +30,5 @@
             <%= link_to "Sign up for big bucks", new_user_registration_path(plan: @premium_plan.id), class: 'btn btn-success btn-lg btn-block signup-button' %>
         </div>
     </div>
+    <% end %>
 </div>

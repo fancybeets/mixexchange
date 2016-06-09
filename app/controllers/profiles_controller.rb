@@ -15,7 +15,7 @@ class ProfilesController < ApplicationController
             render action :new
         end
     end
-    
+
     private
     def profile_params
         params.require(:profile).permit(:first_name,:last_name,:mailing_list,:description)

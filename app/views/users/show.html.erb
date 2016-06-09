@@ -1,1 +1,8 @@
-<%= @user %>
+<div class="well">
+    <h2>
+        <%= @user.profile.first_name %> <%= @user.profile.last_name %>
+    </h2>
+    <p>
+        <%= @user.profile.description %>
+    </p>
+</div>

@@ -2,11 +2,11 @@ class ProfilesController < ApplicationController
     def new
         # form where each user can fill out their own profile
         @user = User.find(params[:user_id])
-        @profile = @user.build_profile
+        @profile = Profile.new
     end
     
     def create
-        @user = User.find (params[:user_id])
+        @user = User.find(params[:user_id])
         @profile = @user.build_profile(profile_params)
         if @profile.save
             flash[:success] = "Profile created!"
@@ -14,6 +14,10 @@ class ProfilesController < ApplicationController
         else
             render action :new
         end
+    end
+    
+    def edit
+        
     end
 
     private

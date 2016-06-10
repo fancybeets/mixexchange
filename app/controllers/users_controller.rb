@@ -5,6 +5,7 @@ class UsersController < ApplicationController
             if current_user.id == @user.id
                 redirect_to new_user_profile_path(current_user.id)
             else
+                flash[:notice] = "No profile found"
                 redirect_to root_path
             end
         end

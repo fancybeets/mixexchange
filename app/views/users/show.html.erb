@@ -1,4 +1,7 @@
 <div class="well">
+    <% if current_user %>
+        <%= link_to "Edit your profile!", edit_user_profile_path(current_user), class: 'btn btn-success pull-right' if current_user.id == params[:id].to_f %>
+    <% end %>
     <h2>
         <%= @user.profile.first_name %> <%= @user.profile.last_name %>
     </h2>

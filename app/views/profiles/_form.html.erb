@@ -1,0 +1,21 @@
+<%= form_for @profile, url: user_profile_path do |x| %>
+    <div class="form-group">
+        <%= x.label :first_name %>
+        <%= x.text_field :first_name, class: "form-control" %>
+    </div>
+    <div class="form-group">
+        <%= x.label :last_name %>
+        <%= x.text_field :last_name, class: "form-control" %>
+    </div>
+    <div class="form-group">
+        <%= x.label :mailing_address %>
+        <%= x.text_field :mailing_address, class: "form-control" %>
+    </div>
+    <div class="form-group">
+        <%= x.label :description %>
+        <%= x.text_area :description, class: "form-control" %>
+    </div>
+    <div class="form-group">
+        <%= x.submit "Create your profile",class: "btn btn-primary" %>
+    </div>
+<% end %>

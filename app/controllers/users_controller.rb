@@ -10,4 +10,7 @@ class UsersController < ApplicationController
             end
         end
     end
+    
+    def index
+    end
 end

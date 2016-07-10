@@ -1,11 +1,29 @@
-<div class="well">
-    <% if current_user %>
-        <%= link_to "Edit your profile!", edit_user_profile_path(current_user), class: 'btn btn-success pull-right' if current_user.id == params[:id].to_f %>
-    <% end %>
-    <h2>
-        <%= @user.profile.first_name %> <%= @user.profile.last_name %>
-    </h2>
-    <p>
-        <%= @user.profile.description %>
-    </p>
+<div class="col-md-12">
+    <div class = 'well sidebar col-md-3'>
+        <%= image_tag @user.profile.avatar, class: 'img-thumbnail' %>
+        <div>
+            Participation stats will go here.
+        </div>
+        <div>
+            Mix photos sent will go here.
+        </div>
+        <div>
+            Mix photos received will go here.
+        </div>
+    </div>
+    <div class = 'content col-md-9'>
+        <% if current_user %>
+            <%= link_to "Edit your profile!", edit_user_profile_path(current_user), class: 'btn btn-success pull-right' if current_user.id == params[:id].to_f %>
+        <% end %>
+        <div class="page-header">
+            <h2>
+                <%= @user.profile.first_name %> <%= @user.profile.last_name %>
+            </h2>
+        </div>
+        <div>
+            <p>
+                <%= @user.profile.description %>
+            </p>
+        </div>
+    </div>
 </div>

@@ -1,4 +1,4 @@
-<%= form_for @profile, url: user_profile_path do |x| %>
+<%= form_for @profile, url: user_profile_path, html: { multipart: true } do |x| %>
     <div class="form-group">
         <%= x.label :first_name %>
         <%= x.text_field :first_name, class: "form-control" %>
@@ -14,6 +14,10 @@
     <div class="form-group">
         <%= x.label :description %>
         <%= x.text_area :description, class: "form-control" %>
+    </div>
+    <div class="form-group">
+        <%= x.label :avatar %>
+        <%= x.file_field :avatar %>
     </div>
     <div class="form-group">
         <%= x.submit "Create your profile",class: "btn btn-primary" %>

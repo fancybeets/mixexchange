@@ -1,7 +1,12 @@
-<div class = "container">
-    <% if user_signed_in? %>
-        <%= render "member_front" %>
-    <% else %>
-        <%= render "guest_front" %>
-    <% end %>
+<div class="container col-md-12">
+    <h1 class="text-center">Welcome to The Mix Exchange</h1>
+    <p class="text-center">you fucking hipster</p>
 </div>
+<div class="container">
+</div>
+
+<% if user_signed_in? %>
+    <%= render "member_front" %>
+<% else %>
+    <%= render "guest_front" %>
+<% end %>
